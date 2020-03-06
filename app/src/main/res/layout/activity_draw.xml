@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:background="@color/Background"
+    tools:context="com.example.mandelbrot.DrawActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Mandelbrot set:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold|italic" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/imgV"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:id="@+id/send"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="send"
+        android:text="Send Image"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/generate"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/send"
+        android:layout_centerHorizontal="true"
+        android:onClick="generate"
+        android:text="Generate Image"
+        android:textColor="@android:color/white" />
+
+    <ZoomControls
+        android:id="@+id/zoomimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/generate"
+        android:layout_centerHorizontal="true">
+
+    </ZoomControls>
+
+</RelativeLayout>
